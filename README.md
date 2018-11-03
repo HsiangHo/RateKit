@@ -9,8 +9,8 @@ RateKit is a easy way for developers to request ratings and reviews for macOS.
 
 ## Screenshots
 
-![](https://github.com/HsiangHo/RateKit/blob/master/doc/gif.gif?raw=true "Optional Title")
-
 ![](https://github.com/HsiangHo/RateKit/blob/master/doc/RateKit.png?raw=true "Optional Title")
 
+Gif:
 
+![](https://github.com/HsiangHo/RateKit/blob/master/doc/gif.gif?raw=true "Optional Title")
