@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <RateKit/RateConfigure.h>
+#import <RateKit/RateWindowController.h>
 
 //! Project version number for RateKit.
 FOUNDATION_EXPORT double RateKitVersionNumber;

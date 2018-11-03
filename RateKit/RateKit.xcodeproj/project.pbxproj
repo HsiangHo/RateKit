@@ -12,6 +12,11 @@
 		980C11B0218D60AD00890F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980C11AF218D60AD00890F27 /* Assets.xcassets */; };
 		980C11B3218D60AD00890F27 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980C11B1218D60AD00890F27 /* MainMenu.xib */; };
 		980C11B6218D60AD00890F27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 980C11B5218D60AD00890F27 /* main.m */; };
+		980C11BD218D652900890F27 /* RateConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 980C11BB218D652900890F27 /* RateConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		980C11BE218D652900890F27 /* RateConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 980C11BC218D652900890F27 /* RateConfigure.m */; };
+		980C11C1218D6BCD00890F27 /* RateWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 980C11BF218D6BCD00890F27 /* RateWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		980C11C2218D6BCD00890F27 /* RateWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980C11C0218D6BCD00890F27 /* RateWindowController.m */; };
+		980C11C4218D76E000890F27 /* RateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980C119B218D5D7500890F27 /* RateKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,10 @@
 		980C11B4218D60AD00890F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		980C11B5218D60AD00890F27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		980C11B7218D60AD00890F27 /* RateKitDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RateKitDemo.entitlements; sourceTree = "<group>"; };
+		980C11BB218D652900890F27 /* RateConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateConfigure.h; sourceTree = "<group>"; };
+		980C11BC218D652900890F27 /* RateConfigure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RateConfigure.m; sourceTree = "<group>"; };
+		980C11BF218D6BCD00890F27 /* RateWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateWindowController.h; sourceTree = "<group>"; };
+		980C11C0218D6BCD00890F27 /* RateWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RateWindowController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980C11C4218D76E000890F27 /* RateKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +62,7 @@
 				980C119D218D5D7500890F27 /* RateKit */,
 				980C11AB218D60AD00890F27 /* RateKitDemo */,
 				980C119C218D5D7500890F27 /* Products */,
+				980C11C3218D76E000890F27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +79,10 @@
 			isa = PBXGroup;
 			children = (
 				980C119E218D5D7500890F27 /* RateKit.h */,
+				980C11BB218D652900890F27 /* RateConfigure.h */,
+				980C11BC218D652900890F27 /* RateConfigure.m */,
+				980C11BF218D6BCD00890F27 /* RateWindowController.h */,
+				980C11C0218D6BCD00890F27 /* RateWindowController.m */,
 				980C119F218D5D7500890F27 /* Info.plist */,
 			);
 			path = RateKit;
@@ -87,6 +102,13 @@
 			path = RateKitDemo;
 			sourceTree = "<group>";
 		};
+		980C11C3218D76E000890F27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -95,6 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				980C11A0218D5D7500890F27 /* RateKit.h in Headers */,
+				980C11C1218D6BCD00890F27 /* RateWindowController.h in Headers */,
+				980C11BD218D652900890F27 /* RateConfigure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +222,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980C11BE218D652900890F27 /* RateConfigure.m in Sources */,
+				980C11C2218D6BCD00890F27 /* RateWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +373,9 @@
 				INFOPLIST_FILE = RateKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -367,6 +396,9 @@
 				INFOPLIST_FILE = RateKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -382,6 +414,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = RateKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,6 +429,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = RateKitDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
