@@ -4,6 +4,15 @@
       "idiom" : "universal",
       "filename" : "demo-icon.png",
       "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "filename" : "demo-icon@2.png",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
