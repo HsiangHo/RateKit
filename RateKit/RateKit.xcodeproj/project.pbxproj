@@ -19,7 +19,18 @@
 		980C11C4218D76E000890F27 /* RateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980C119B218D5D7500890F27 /* RateKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		0359BCE621A2F9EB007588C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0359BCE221A2F9EB007588C1 /* RateKitSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0359BCD321A2F957007588C1;
+			remoteInfo = RateKitSwift;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0359BCE221A2F9EB007588C1 /* RateKitSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RateKitSwift.xcodeproj; path = ../../../Developpements/Rate/RateKitSwift/RateKitSwift.xcodeproj; sourceTree = "<group>"; };
 		980C119B218D5D7500890F27 /* RateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980C119E218D5D7500890F27 /* RateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateKit.h; sourceTree = "<group>"; };
 		980C119F218D5D7500890F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,9 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0359BCE321A2F9EB007588C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0359BCE721A2F9EB007588C1 /* RateKitSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		980C1191218D5D7400890F27 = {
 			isa = PBXGroup;
 			children = (
+				0359BCE221A2F9EB007588C1 /* RateKitSwift.xcodeproj */,
 				980C119D218D5D7500890F27 /* RateKit */,
 				980C11AB218D60AD00890F27 /* RateKitDemo */,
 				980C119C218D5D7500890F27 /* Products */,
@@ -171,6 +191,7 @@
 				TargetAttributes = {
 					980C119A218D5D7500890F27 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					980C11A9218D60AC00890F27 = {
@@ -190,6 +211,12 @@
 			mainGroup = 980C1191218D5D7400890F27;
 			productRefGroup = 980C119C218D5D7500890F27 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0359BCE321A2F9EB007588C1 /* Products */;
+					ProjectRef = 0359BCE221A2F9EB007588C1 /* RateKitSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				980C119A218D5D7500890F27 /* RateKit */,
@@ -197,6 +224,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0359BCE721A2F9EB007588C1 /* RateKitSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RateKitSwift.framework;
+			remoteRef = 0359BCE621A2F9EB007588C1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		980C1199218D5D7500890F27 /* Resources */ = {
@@ -362,6 +399,7 @@
 		980C11A4218D5D7500890F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -380,12 +418,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		980C11A5218D5D7500890F27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -404,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
