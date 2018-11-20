@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0359BCEC21A2FB70007588C1 /* RateConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0359BCEA21A2FB70007588C1 /* RateConfigure.swift */; };
+		0359BCED21A2FB70007588C1 /* RateWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0359BCEB21A2FB70007588C1 /* RateWindowController.swift */; };
 		980C11A0218D5D7500890F27 /* RateKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 980C119E218D5D7500890F27 /* RateKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		980C11AE218D60AD00890F27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 980C11AD218D60AD00890F27 /* AppDelegate.m */; };
 		980C11B0218D60AD00890F27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 980C11AF218D60AD00890F27 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0359BCEA21A2FB70007588C1 /* RateConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateConfigure.swift; sourceTree = "<group>"; };
+		0359BCEB21A2FB70007588C1 /* RateWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateWindowController.swift; sourceTree = "<group>"; };
 		980C119B218D5D7500890F27 /* RateKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		980C119E218D5D7500890F27 /* RateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RateKit.h; sourceTree = "<group>"; };
 		980C119F218D5D7500890F27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,9 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0359BCE921A2FB54007588C1 /* RateKitSwift */ = {
+			isa = PBXGroup;
+			children = (
+				0359BCEA21A2FB70007588C1 /* RateConfigure.swift */,
+				0359BCEB21A2FB70007588C1 /* RateWindowController.swift */,
+			);
+			path = RateKitSwift;
+			sourceTree = "<group>";
+		};
 		980C1191218D5D7400890F27 = {
 			isa = PBXGroup;
 			children = (
+				0359BCE921A2FB54007588C1 /* RateKitSwift */,
 				980C119D218D5D7500890F27 /* RateKit */,
 				980C11AB218D60AD00890F27 /* RateKitDemo */,
 				980C119C218D5D7500890F27 /* Products */,
@@ -171,6 +185,7 @@
 				TargetAttributes = {
 					980C119A218D5D7500890F27 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					980C11A9218D60AC00890F27 = {
@@ -223,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				980C11BE218D652900890F27 /* RateConfigure.m in Sources */,
+				0359BCED21A2FB70007588C1 /* RateWindowController.swift in Sources */,
+				0359BCEC21A2FB70007588C1 /* RateConfigure.swift in Sources */,
 				980C11C2218D6BCD00890F27 /* RateWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +379,7 @@
 		980C11A4218D5D7500890F27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -380,12 +398,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		980C11A5218D5D7500890F27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -404,6 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.HyperartFlow.RateKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
