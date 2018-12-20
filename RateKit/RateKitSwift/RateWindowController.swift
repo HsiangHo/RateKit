@@ -33,7 +33,7 @@ final class RateWindowController: NSWindowController {
     var block: RateCompletionCallback!
     
     init(configure: RateConfigure) {
-
+        
         self.configure = configure
         
         super.init(window: nil)
@@ -43,14 +43,14 @@ final class RateWindowController: NSWindowController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-        
+    
     func requestRateWindow(_ pos: RateWindowPosition, with block: @escaping RateCompletionCallback) {
-        self.block = block
+        self.block               = block
         window?.orderOut(nil)
-        let nGap: CGFloat = 10
-        let rctScreen: NSRect? = NSScreen.main?.visibleFrame
-        var rctTmpWnd: NSRect = (window?.frame)!
-        var rctWnd: NSRect = (window?.frame)!
+        let nGap      : CGFloat  = 10
+        let rctScreen : NSRect?  = NSScreen.main?.visibleFrame
+        var rctTmpWnd            = (window?.frame)!
+        var rctWnd               = (window?.frame)!
         
         switch pos {
         case .topLeft:
@@ -70,7 +70,7 @@ final class RateWindowController: NSWindowController {
             rctWnd.origin.x = NSMaxX(rctScreen!) - NSWidth(rctWnd) - nGap
             rctWnd.origin.y = NSMaxY(rctScreen!) - NSHeight(rctWnd) - nGap
             window?.animator().setFrame(rctWnd, display: true)
-        
+            
         case .center:
             window?.makeKeyAndOrderFront(nil)
             window?.center()
@@ -111,7 +111,7 @@ final class RateWindowController: NSWindowController {
         window.titleVisibility = .hidden
         window.isMovableByWindowBackground = true
         window.center()
-        window.backgroundColor = NSColor.white
+        window.backgroundColor = NSColor.textBackgroundColor
         
         ivIcon = NSImageView(frame: NSMakeRect((NSWidth(rctWindow) - 64) / 2, NSHeight(rctWindow) - 86, 64, 64))
         ivIcon.imageScaling = .scaleAxesIndependently
@@ -122,7 +122,7 @@ final class RateWindowController: NSWindowController {
         lbName.isEditable = false
         lbName.isBezeled = false
         lbName.isSelectable = false
-        lbName.textColor = NSColor(calibratedRed: 80 / 255.0, green: 80 / 255.0, blue: 80 / 255.0, alpha: 1.0)
+        lbName.textColor = NSColor.labelColor
         lbName.backgroundColor = NSColor.clear
         lbName.font = NSFont(name: "HelveticaNeue", size: 21)
         lbName.alignment = .center
@@ -133,7 +133,7 @@ final class RateWindowController: NSWindowController {
         lbDetailText.isEditable = false
         lbDetailText.isBezeled = false
         lbDetailText.isSelectable = false
-        lbDetailText.textColor = NSColor.gray
+        lbDetailText.textColor = NSColor.labelColor
         lbDetailText.backgroundColor = NSColor.clear
         lbDetailText.font = NSFont(name: "HelveticaNeue", size: 12)
         lbDetailText.lineBreakMode = .byWordWrapping
