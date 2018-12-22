@@ -30,7 +30,22 @@
     rateWindowController = [[RateWindowController alloc] initWithConfigure:configure];
     [rateWindowController setRateTimeout:10];
     [rateWindowController requestRateWindow:RateWindowPositionTopRight withRateCompletionCallback:^(RateResult rlst) {
-        NSLog(@"%lu",(unsigned long)rlst);
+        switch (rlst) {
+            case RateResultRated:
+                
+                break;
+                
+            case RateResultLater:
+                
+                break;
+                
+            case RateResultTimeout:
+                
+                break;
+                
+            default:
+                break;
+        }
     }];
 }
 
