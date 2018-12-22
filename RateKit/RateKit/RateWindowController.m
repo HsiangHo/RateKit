@@ -108,7 +108,7 @@
     [window setMovableByWindowBackground:YES];
     [window center];
     
-    [window setBackgroundColor:[NSColor whiteColor]];
+    [window setBackgroundColor:[NSColor textBackgroundColor]];
     
     _ivIcon = [[NSImageView alloc] initWithFrame:NSMakeRect((NSWidth(rctWindow) - 64) / 2, NSHeight(rctWindow) - 86, 64, 64)];
     [_ivIcon setImageScaling:NSImageScaleAxesIndependently];
@@ -119,7 +119,7 @@
     [_lbName setEditable:NO];
     [_lbName setBezeled:NO];
     [_lbName setSelectable:NO];
-    [_lbName setTextColor:[NSColor colorWithCalibratedRed:80/255.0 green:80/255.0 blue:80/255.0 alpha:1.0]];
+    [_lbName setTextColor:[NSColor labelColor]];
     [_lbName setBackgroundColor:[NSColor clearColor]];
     [_lbName setFont:[NSFont fontWithName:@"HelveticaNeue" size:21]];
     [_lbName setAlignment:NSCenterTextAlignment];
@@ -130,7 +130,7 @@
     [_lbDetailText setEditable:NO];
     [_lbDetailText setBezeled:NO];
     [_lbDetailText setSelectable:NO];
-    [_lbDetailText setTextColor:[NSColor grayColor]];
+    [_lbDetailText setTextColor:[NSColor labelColor]];
     [_lbDetailText setBackgroundColor:[NSColor clearColor]];
     [_lbDetailText setFont:[NSFont fontWithName:@"HelveticaNeue" size:12]];
     [_lbDetailText setLineBreakMode:NSLineBreakByWordWrapping];
