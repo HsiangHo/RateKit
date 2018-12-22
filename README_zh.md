@@ -5,25 +5,25 @@
 [![Platform](https://img.shields.io/badge/platform-macOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/Language-Objective--C%20%7C%20Swift-yellowgreen.svg)]()  
 
-RateKit is an easy way for developers to request ratings and reviews in Mac App Store.  
+RateKit 是一个方便开发者请求用户评分和评论的组件
 [中文版](https://github.com/HsiangHo/RateKit/blob/master/README_zh.md)  
 
 ![](https://github.com/HsiangHo/RateKit/blob/master/doc/gif.gif?raw=true "Optional Title")
 
-## Installation
-Clone the rep, build the RateKit or copy all the source files into your project.
+## 如何安装
+克隆仓库到本地，将RateKit工程加入到你的项目。
   
-## Features
-- [x] Customization and Configuration to your needs
-- [x] Awesome UI to request users to rate app in Mac App Store
-- [x] Display rate window with animations
+## 功能
+- [x] 根据你的需要进行自定义
+- [x] 非常好看的UI来请求用户进行评论和评分
+- [x] 动画显示请求评分窗口
 
-## Example
+## 栗子
 
-To run the example project, clone the repo, build and run the target 'RateKitDemo'.
+在工程文件里，编译执行'RateKitDemo'这个目标程序，方可见demo.
 
-## Getting started  
-- Create rate window configuration
+## 如何使用
+- 如何创建评分窗口的配置
 ```
 
     RateConfigure *configure = [[RateConfigure alloc] init];
@@ -36,7 +36,7 @@ To run the example project, clone the repo, build and run the target 'RateKitDem
     
 ```
 
-- Make a rate window and request users to rate app.
+- 如何创建评分窗口并请求用户评分
 ```
     RateWindowController *rateWindowController = [[RateWindowController alloc] initWithConfigure:configure];
     //Set a timeout for rate window to close itself automatically.
@@ -62,13 +62,13 @@ To run the example project, clone the repo, build and run the target 'RateKitDem
     }];
 ```
 
-## Requirements
+## 使用环境
 macOS 10.10 and above  
 Xcode 8.0+
 
-## Contributing
-Contributions are very welcome 🙌 🤓
+## 如何贡献
+任何问题欢迎issue, PRs 🙌 🤓
 
-## Screenshots
+## 屏幕截图
 
 ![](https://github.com/HsiangHo/RateKit/blob/master/doc/RateKit.png?raw=true "Optional Title")
