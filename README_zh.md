@@ -5,8 +5,8 @@
 [![Platform](https://img.shields.io/badge/platform-macOS-yellow.svg)]()
 [![Language](https://img.shields.io/badge/Language-Objective--C%20%7C%20Swift-yellowgreen.svg)]()  
 
-RateKit 是一个方便开发者请求用户评分和评论的组件
-[中文版](https://github.com/HsiangHo/RateKit/blob/master/README_zh.md)  
+RateKit 是一个方便开发者请求用户评分和评论的组件  
+
 
 ![](https://github.com/HsiangHo/RateKit/blob/master/doc/gif.gif?raw=true "Optional Title")
 

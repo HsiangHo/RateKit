@@ -6,7 +6,9 @@
 [![Language](https://img.shields.io/badge/Language-Objective--C%20%7C%20Swift-yellowgreen.svg)]()  
 
 RateKit is an easy way for developers to request ratings and reviews in Mac App Store.  
-[中文版](https://github.com/HsiangHo/RateKit/blob/master/README_zh.md)  
+
+[中文版](https://github.com/HsiangHo/RateKit/blob/master/README_zh.md)   
+
 
 ![](https://github.com/HsiangHo/RateKit/blob/master/doc/gif.gif?raw=true "Optional Title")
 
