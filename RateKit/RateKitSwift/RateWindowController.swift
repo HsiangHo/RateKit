@@ -85,14 +85,14 @@ final class RateWindowController: NSWindowController {
         if nil != configure?.rateURL {
             NSWorkspace.shared.open(configure!.rateURL!)
         }
-        window?.orderOut(nil)
+        dismissAnimated()
         if block != nil {
             block!(.rated)
         }
     }
     
     @IBAction func ignoreButton_click(_ sender: Any) {
-        window?.orderOut(nil)
+        dismissAnimated()
         if block !=  nil {
             block!(.later)
         }
@@ -170,10 +170,24 @@ final class RateWindowController: NSWindowController {
     
     @objc func timeoutFunc() {
         if (window?.isVisible)! {
-            window?.orderOut(nil)
+            dismissAnimated()
             if block != nil {
                 block!(.timeout)
             }
+        }
+    }
+    func dismissAnimated() {
+        NSAnimationContext.runAnimationGroup({ context in
+            context.allowsImplicitAnimation = true
+            context.duration = 0.3
+            context.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            window?.animator().alphaValue = 0
+        }) {
+            [weak self] in
+            guard let self = self, let window = self.window else {
+                return
+            }
+            window.orderOut(nil)
         }
     }
 }
